@@ -1,10 +1,5 @@
-source 'https://rubygems.org'
+# frozen_string_literal: true
 
-gem 'json'
-gem 'minitest', '~> 5.0'
-gem 'uuid'
+source "https://rubygems.org"
 
-group :development do
-  gem 'rake'
-end
-
+gemspec

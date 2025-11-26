@@ -1,6 +1,9 @@
+# frozen_string_literal: true
+
 require 'json'
 require 'net/http'
 require 'uri'
+require_relative 'tlq_client/version'
 
 class TLQClient
   attr_reader :host, :port, :base_uri
@@ -25,7 +28,7 @@ class TLQClient
   def get_messages(count = 1)
     response = post('/get', { count: count })
     parsed = JSON.parse(response.body)
-    Array(parsed['messages'] || parsed) # Handle both array and single message responses
+    parsed.is_a?(Array) ? parsed : Array(parsed['messages'] || parsed)
   rescue JSON::ParserError => e
     raise "Failed to parse response: #{e.message}"
   rescue StandardError => e

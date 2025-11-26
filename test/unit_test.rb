@@ -1,5 +1,7 @@
+# frozen_string_literal: true
+
 require 'minitest/autorun'
-require_relative 'tlq_client'
+require_relative '../lib/tlq_client'
 
 class TLQClientTest < Minitest::Test
   def setup
@@ -79,9 +81,6 @@ class TLQClientTest < Minitest::Test
   end
 
   def test_health_check_success
-    # Using a more realistic mock
-    uri = URI('http://localhost:1337/hello')
-    http = Net::HTTP.new(uri.host, uri.port)
     mock_response = Minitest::Mock.new
     mock_response.expect(:body, '"Hello World"')
 
@@ -100,5 +99,9 @@ class TLQClientTest < Minitest::Test
   def test_client_has_post_method
     # Test that the post method exists by checking if it's a private method or accessible
     assert_respond_to @client, :send # We can call send to access private methods if needed
+  end
+
+  def test_version_constant
+    assert_equal "0.1.0", TLQClient::VERSION
   end
 end
