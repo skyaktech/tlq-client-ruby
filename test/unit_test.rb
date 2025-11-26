@@ -102,6 +102,6 @@ class TLQClientTest < Minitest::Test
   end
 
   def test_version_constant
-    assert_equal "0.1.0", TLQClient::VERSION
+    assert_equal "0.2.0", TLQClient::VERSION
   end
 end
