@@ -1,0 +1,6 @@
+--markup markdown
+--charset utf-8
+--output-dir doc
+--readme README.md
+--title "TLQClient Documentation"
+lib/**/*.rb

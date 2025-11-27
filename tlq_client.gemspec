@@ -18,6 +18,7 @@ Gem::Specification.new do |spec|
   spec.metadata["homepage_uri"] = spec.homepage
   spec.metadata["source_code_uri"] = "https://github.com/skyaktech/tlq-client-ruby"
   spec.metadata["changelog_uri"] = "https://github.com/skyaktech/tlq-client-ruby/blob/main/CHANGELOG.md"
+  spec.metadata["documentation_uri"] = "https://rubydoc.info/gems/tlq-client"
 
   spec.files = Dir.glob(%w[
     lib/**/*
@@ -33,4 +34,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "bundler"
   spec.add_development_dependency "minitest", "~> 5.0"
   spec.add_development_dependency "rake", "~> 13.0"
+  spec.add_development_dependency "yard", "~> 0.9"
 end

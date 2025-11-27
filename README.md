@@ -30,7 +30,7 @@ require 'tlq_client'
 # Initialize client (defaults to localhost:1337)
 client = TLQClient.new
 # or with custom host/port
-client = TLQClient.new(host: 'queue.example.com', port: 8080)
+client = TLQClient.new(host: 'tlq.skyak.tech', port: 8080)
 
 # Add messages to the queue
 message = client.add_message("Process order #123")
