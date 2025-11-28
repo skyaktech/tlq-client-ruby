@@ -3,5 +3,5 @@
 class TLQClient
   # The current version of the TLQClient gem.
   # @return [String] the semantic version string
-  VERSION = "0.2.0"
+  VERSION = "0.2.1"
 end
